@@ -73,8 +73,8 @@
 
 
         <!--* Issue Card  -->
-        <section class="grid grid-cols-4 justify-between gap-4">
-            <div id="issuesContainer" class="p-2 border-t-4 border-green-500 rounded-md bg-white shadow">
+        <section id="issueCardContainer" class="grid grid-cols-4 justify-between gap-4 mb-6">
+            <div id="issueCard" class="p-2 border-t-4 border-green-500 rounded-md bg-white shadow">
                 <div class="flex justify-between my-3">
                     <img src="assets/Open-Status.png" alt="">
                     <div class="badge badge-soft badge-secondary">High</div>
@@ -97,6 +97,50 @@
                 </div>
             </div>
 
+        </section>
+
+        <section class="modalContainer">
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h2 class="text-2xl mb-4">Fix broken image uploads</h2>
+
+                    <div class="flex justify-between mb-4">
+                        <button class="btn btn-success rounded-full">Opened</button>
+                        <li>Opened by Fahim Ahmed</li>
+                        <li>22/02/2026</li>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="badge badge-soft badge-secondary rounded-full">BUG</div>
+                        <div class="badge badge-outline badge-warning rounded-full">HELP WANTED</div>
+                    </div>
+
+                    <p>The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive
+                        behavior.</p>
+
+                    <div class="grid grid-cols-2 mt-4 shadow-sm">
+                        <div class="">
+                            <p class="text-[#64748B] text-sm">Assignee:</p>
+                            <h2 class="font-semibold">Fahim Ahmed</h2>
+                        </div>
+                        <div class="flex flex-col text-left items-start ">
+                            <p class="text-[#64748B] text-sm mb-1">Priority:</p>
+                            <button class="btn btn-error btn-sm rounded-full px-6">
+                                HIGH
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn btn-primary">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </section>
     </main>
 
